@@ -1,0 +1,178 @@
+# api call for  create user account
+###
+POST http://127.0.0.1:8000/cinema/user/
+Content-Type: application/json
+
+{
+    "username":"user",
+    "email":"user@gmail.com",
+    "password":"user@123",
+    "phone":9876546756
+    
+}
+
+# api call for token in user
+###
+POST http://127.0.0.1:8000/cinema/token/
+Content-Type: application/json
+
+{
+    "username":"user",
+    "password":"user@123"
+}
+
+
+=======================Films end point============================
+
+# api call for listing
+###
+GET http://127.0.0.1:8000/films/all/
+Accept: application/json
+Authorization: Token b5e2ef5a844941d0452fa84462bc2fe637bb438b
+
+# api call for create add
+###
+POST http://127.0.0.1:8000/films/add/
+Content-Type: application/json
+Authorization: Token b5e2ef5a844941d0452fa84462bc2fe637bb438b
+
+{
+    "id":1,
+  "title": "sachein",
+  "description": "story of a college boy falls in love",
+  "release_date": "2024-02-09",
+  "language": "Tamil",
+  "genre": "romance",
+  "director": "atlee",
+  "cast": "vijay,genelia",
+  "created_at": "2026-10-26T16:09:30.550433Z",
+  "updated_at": "2026-10-26",
+  "created_by": 1
+
+}
+
+#api call for retrieve
+###
+GET http://127.0.0.1:8000/films/movies/1/
+Accept: application/json
+Authorization: Token b5e2ef5a844941d0452fa84462bc2fe637bb438b
+
+
+# api call for update
+###
+PUT http://127.0.0.1:8000/films/movies/1/
+Content-Type: application/json
+Authorization: Token b5e2ef5a844941d0452fa84462bc2fe637bb438b
+
+{
+  "id": 1,
+  "title": "Premalu",
+  "description": "Sachin, a young man, travels to Hyderabad and falls in love. Sangeeth Prathap, Shyam Mohan",
+  "release_date": "2024-02-09",
+  "language": "Malayalam",
+  "genre": "romance",
+  "director": "Girish A. D",
+  "cast": "Naslen, Mamitha Baiju",
+  "created_at": "2026-10-26T16:09:30.550433Z",
+  "updated_at": "2026-10-26",
+  "created_by": 1
+}
+
+
+# api call for delete
+###
+DELETE http://127.0.0.1:8000/films/movies/1/
+Accept: application/json
+Authorization: Token b5e2ef5a844941d0452fa84462bc2fe637bb438b
+
+
+======================================================
+
+# api call for create song
+###
+POST http://127.0.0.1:8000/music/song/6/
+Content-Type: application/json
+Authorization: Token b5e2ef5a844941d0452fa84462bc2fe637bb438b
+
+{
+    
+  "title": "kanmoodi",
+  "album": "sachein love",
+  "singer": "dsp",
+  "music_director": "dsp",
+  "language": "Tamil",
+  "genre": "Romantic",
+  "release_date": "2021-10-25",
+  "duration": 212,
+  "lyrics": "A romantic tamil song expressing attraction and love",
+  "track_number": 1,
+  "created_at": "2026-10-27T10:51:01.723147Z",
+  "updated_at": "2026-10-27T10:51:01.723173Z",
+  "movie": 4,
+  "created_by": 1
+   
+}
+
+
+#api call for retrieve
+###
+GET http://127.0.0.1:8000/music/4/songs/
+Accept: application/json
+Authorization: Token b5e2ef5a844941d0452fa84462bc2fe637bb438b
+
+
+# api call for updated
+###
+PUT http://127.0.0.1:8000/music/2/songs/
+Content-Type: application/json
+Authorization: Token b5e2ef5a844941d0452fa84462bc2fe637bb438b
+
+{
+  "id": 2,
+  "title": "Darshanaa",
+  "album": "Hridayam",
+  "singer": "Darshana Rajendran",
+  "music_director": "Hesham Abdul Wahab",
+  "language": "Malayalam",
+  "genre": "Romantic",
+  "release_date": "2021-10-25",
+  "duration": 212,
+  "lyrics": "A romantic Malayalam song expressing attraction and love",
+  "track_number": 1,
+  "created_at": "2026-10-27T10:51:01.723147Z",
+  "updated_at": "2026-10-27T10:51:01.723173Z",
+  "movie": 2,
+  "created_by": 1
+}
+
+
+
+#api call for delete
+###
+DELETE http://127.0.0.1:8000/music/5/songs/
+Accept: application/json
+Authorization: Token b5e2ef5a844941d0452fa84462bc2fe637bb438b
+
+
+===================review==================
+#api call for create review
+###
+POST http://127.0.0.1:8000/response/opinion/4/review/
+Content-Type: application/json
+Authorization: Token b5e2ef5a844941d0452fa84462bc2fe637bb438b
+
+{
+  "msg":"one time watchable",
+  "rating":"3"
+}
+
+#retrieve reviews
+###
+GET http://127.0.0.1:8000/response/opinion/1/
+Content-Type: application/json
+Authorization: Token b5e2ef5a844941d0452fa84462bc2fe637bb438b
+
+
+
+
+
